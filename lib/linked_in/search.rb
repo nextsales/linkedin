@@ -4,6 +4,8 @@ module LinkedIn
     def search(options={}, type='people')
 
       path = "/#{type.to_s}-search"
+      if (type == 'company')
+        path = "/#{type.to_s}-search:(companies:(id,name,industries,logo-url,description,locations,specialties))"
 
       if options.is_a?(Hash)
         fields = options.delete(:fields)

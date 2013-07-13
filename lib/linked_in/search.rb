@@ -5,7 +5,7 @@ module LinkedIn
 
       path = "/#{type.to_s}-search"
       if (type == 'company')
-        path = "/#{type.to_s}-search:(companies:(id,name,industries,logo-url,description,locations,specialties))"
+        path = "/#{type.to_s}-search:(companies:(id,name,industries,logo-url,square-logo-url,description,locations,specialties))"
       end
 
       if options.is_a?(Hash)
